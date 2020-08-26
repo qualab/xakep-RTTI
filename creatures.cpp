@@ -65,7 +65,7 @@ public:
     template <typename T>
     bool is() const noexcept
     {
-        return is_base_id(T::id());
+        return is_base_id(T::id()) || T::id() == who();;
     }
 
     virtual bool is_base_id(const class_id& base_id) const noexcept
